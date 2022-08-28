@@ -37,6 +37,16 @@ int main()
             std::cout << "Congratulations! Your account has been created\nYour account number is " << bank_acc_name.size() << std::endl;
             break;
         }
+        case 3:
+            for (int i = 0; i < bank_acc_name.size(); i++)
+            {
+                auto it_name = bank_acc_name.begin();
+                auto it_balance = bank_balance.begin();
+                std::advance(it_name, i);
+                std::advance(it_balance, i);
+                std::cout << *it_name << " " << *it_balance << std::endl;
+            }
+            break;
         default:
             std::cout << "Non-valid input" << std::endl;
             break;
